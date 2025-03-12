@@ -1,1 +1,2 @@
 - **2024-03-13**: Completed Project Initialization and Setup. Created README, package.json, TSConfig, ESLint, Prettier, and basic project structure. Set up Electron main and renderer processes.
+- **2024-03-14**: Fixed test issues in API client and service. Implemented proper mocking for fetch API and ReadableStream in tests. Resolved TypeScript type issues and linting errors.
