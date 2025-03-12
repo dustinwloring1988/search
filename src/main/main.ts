@@ -22,11 +22,13 @@ function createWindow(): void {
   });
 
   // Load the index.html file or the packaged app
-  const startUrl = process.env.ELECTRON_START_URL || url.format({
-    pathname: path.join(__dirname, '../../src/renderer/index.html'),
-    protocol: 'file:',
-    slashes: true,
-  });
+  const startUrl =
+    process.env.ELECTRON_START_URL ||
+    url.format({
+      pathname: path.join(__dirname, '../../src/renderer/index.html'),
+      protocol: 'file:',
+      slashes: true,
+    });
 
   mainWindow.loadURL(startUrl);
 
@@ -73,9 +75,9 @@ ipcMain.handle('app-info', () => {
 });
 
 // Error handling
-process.on('uncaughtException', (error) => {
+process.on('uncaughtException', error => {
   electronLog.error('Uncaught exception:', error);
 });
 
 // Log startup
-electronLog.info('Starting application:', app.getName(), app.getVersion()); 
+electronLog.info('Starting application:', app.getName(), app.getVersion());
