@@ -1,0 +1,140 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Dual panel layout */
+.panel {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-panel {
+  width: 50%;
+  border-right: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.right-panel {
+  width: 50%;
+  background-color: #f9f9f9;
+}
+
+/* Input and output areas */
+.input-area {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.output-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.steps-area {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  max-height: 50%;
+  overflow-y: auto;
+}
+
+.browser-preview {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Form elements */
+textarea, input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+}
+
+button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+/* Status indicators */
+.status {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.status.loading {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Browser preview and steps */
+.step {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #4285f4;
+  background-color: #e8f0fe;
+}
+
+.preview-container {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.preview-container img {
+  width: 100%;
+  height: auto;
+} 

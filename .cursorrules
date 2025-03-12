@@ -1,0 +1,18 @@
+- At the end of a section:
+  1. Run `npm run lint --fix` to ensure code quality.
+  2. Run `npm run format` to enforce consistent styling.
+  3. Run tests with `npm test`. If tests fail, fix errors before proceeding.
+  4. If all checks pass, finalize with `npm run build`.
+- Log a one-line markdown summary in `.cursor-updates` after every interaction.
+- Commit changes automatically with:
+  ```
+  git add .;
+  git commit -m "...";
+  git push
+  ```
+  Use structured, present-tense commit messages (e.g., `feat: add auth module`).
+- Maintain clean, well-structured code following ESLint and Prettier standards.
+- Functions must have clear TypeScript types.
+- Use explicit types; avoid `any`.
+- Update `.env.example` for new environment variables.
+- DO NOT use mock data.
